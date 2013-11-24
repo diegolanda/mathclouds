@@ -1,0 +1,75 @@
+#ACGamePlay {
+	background: white;
+}
+
+#HUD {
+	background: white;
+}
+#GPContent {
+	background: white;
+}
+#GPResults {
+	background: white;
+	display: table;
+	width: 100%;
+	height: 150px;
+	padding-top: 20px;
+}
+
+#GPResults div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background: url('../img/cloud.png') no-repeat center white;
+	background-size:100px 100px;
+}
+
+#GPOperation {
+	position: absolute;
+	display: table;
+	bottom: 0;
+	width: 100%;
+	height: 150px;
+}
+
+#GPOperation div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background: url('../img/cloud.png') no-repeat center white;
+	background-size:120% 250px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.x-toggle-content {
+	background: inherit;
+}
+
+x-toggle {
+	margin: 5px;
+}
+/** Table **/
+.table{
+	display: table;
+	font-size: medium;
+	background: inherit;
+}
+
+.row {
+	display: table-row;
+	background: inherit;
+}
+
+.cell {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: inherit;
+}
+
+.cell label {
+	background: inherit;
+}

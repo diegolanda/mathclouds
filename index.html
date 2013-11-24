@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+		-moz-user-select: none;
+		user-select: none;
+            }
+            
+            body{
+                background: rgb(190,222,232);
+				background: white;
+		height: auto;
+		overflow: hidden;
+            }
+	    
+	    x-appbar {
+		width: 320px;
+		height: 50px;
+	    }
+	    
+	    #AppContainer {
+		width: 320px;
+		height: 430px;
+	    }
+	    
+            x-appbar div{
+                cursor: pointer;
+            }
+            
+            x-flipbox div:first-child{
+                background: rgb(80, 195, 230);
+            }
+            
+            x-flipbox div{
+                background: rgb(0, 195, 255);
+				background: white;
+            }
+        </style>
+		<link rel="stylesheet" type="text/css" href="css/gameplay.css"/>
+        <!--Brick FrameWork-->
+        <link rel="stylesheet" type="text/css" href="js/brick/brick-0.9.1.css"/>
+        <script type="text/javascript" src="js/brick/brick-0.9.1.js"></script>
+    </head>
+    
+    <body>
+	<audio id="fxBackground" src="/data/background.mp3" autoplay loop></audio>
+	<audio id="fxLose" src="/data/lose.wav"></audio>
+	<audio id="fxWin" src="/data/win.wav"></audio>
+	
+	<div id="AppContainer">
+            <x-flipbox id="flipbox">
+                <div id="ACOptions"></div>
+                <div id="ACGamePlay"><br/><br/><h1><center>Hit Run!</center></h1></div>
+            </x-flipbox>
+        </div>
+        <x-appbar>
+            <div id="btnOptions">Options</div>
+            <header>Math Clouds</header>
+            <div id="btnRun">Run</div>
+        </x-appbar>
+    </body>
+    
+    <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+    
+	<script type="text/javascript" src="js/adding.js"></script>
+	<script type="text/javascript" src="js/substracting.js"></script>
+	
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</html>

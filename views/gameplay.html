@@ -1,0 +1,67 @@
+<div>
+	<div id="HUD">
+		<center><h1>GameplaY</h1></center>
+	</div>
+	<div id="GPContent">
+		<div id="GPResults">
+			<div id="GPResults1"></div>
+			<div id="GPResults2"></div>
+			<div id="GPResults3"></div>
+		</div>
+		
+		<div id="GPOperation">
+			<div id="GPCurrentOperation">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$('#GPResults1').click( function() {
+		checkWin($('#GPResults1').html());
+		
+		generateNextValues();
+	});
+	
+	$('#GPResults2').click( function() {
+		checkWin($('#GPResults2').html());
+		
+		generateNextValues();
+	});
+	
+	$('#GPResults3').click( function() {
+		checkWin($('#GPResults3').html());
+		
+		generateNextValues();
+	});
+	
+	function generateNextValues() {
+		if ( selectedOperation === "Add") {
+			if ( !GPAdd.nextValue() )
+			{
+				finishGame();
+				return;
+			}
+			loadValues(GPAdd.currentOperation());
+		}
+		else if ( selectedOperation === "Sub") {
+			if ( !GPSub.nextValue() )
+			{
+				finishGame();
+					
+				return;
+			}
+			loadValues(GPSub.currentOperation());
+		}
+	}
+	
+	function finishGame() {
+		if(totalCorrect > totalWrong)
+			document.getElementById('fxWin').play();
+		else
+			document.getElementById('fxLose').play();
+					
+		$( "#ACGamePlay" ).html("<br><center>Finish!</center><br/><center><h1>Hit Run Again!</h1></center><br/><br/>");
+		$( "#ACGamePlay" ).html($( "#ACGamePlay" ).html() + "<center><h1>:) -> " + totalCorrect + " | " + ":( -> " + totalWrong + "</h1></center>");
+	}
+</script>
